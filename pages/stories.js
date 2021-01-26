@@ -22,8 +22,8 @@ export default async function Stories(path) {
             store.dispatch({ type: isFavorited ? "REMOVE_FAVORITE" : "ADD_FAVORITE", payload: { favorite: story } })
 
             await Stories(path);
-        })
-    })
+        });
+    });
 }
 
 async function getStories(path) {
